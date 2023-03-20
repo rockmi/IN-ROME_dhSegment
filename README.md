@@ -18,8 +18,7 @@ This is the dhSegment demo notebook adapted to be run on our HPC-cluster.
 
     #!/bin/bash
     #
-    #SLURM Parameters
-    #------------------------------------------------------------------------
+    #SLURM Parameters:
     #- Job Name (e.g. displayed in sinfo, squeue)
     #SBATCH --job-name=JupyterLab
     #- How many instances of this script should run?
