@@ -2,7 +2,7 @@
 
 This is the dhSegment demo notebook adapted to be run on our HPC-cluster.
 
-##Quick how to install
+## Quick how to install
 
 1. Copy all git from github when you are logged in HPC1:
     wget  https://github.com/rockmi/IN-ROME_dhSegment/archive/refs/heads/main.zip #Or right-click on Download ZIP & copy link to the github repository ZIP file
@@ -18,13 +18,13 @@ This is the dhSegment demo notebook adapted to be run on our HPC-cluster.
 
     #!/bin/bash
     #
-    # SLURM Parameters
-    # ------------------------------------------------------------------------
-    # - Job Name (e.g. displayed in sinfo, squeue)
+    #SLURM Parameters
+    #------------------------------------------------------------------------
+    #- Job Name (e.g. displayed in sinfo, squeue)
     #SBATCH --job-name=JupyterLab
-    # - How many instances of this script should run?
+    #- How many instances of this script should run?
     #SBATCH --ntasks=1
-    # - Where to direct program output to (output of pathon scripts, jupyter, etc.)?
+    #- Where to direct program output to (output of pathon scripts, jupyter, etc.)?
     #SBATCH --output=slurm.jupyterlab.out
     #SBATCH --error=slurm.jupyterlab.err
 
@@ -35,11 +35,11 @@ This is the dhSegment demo notebook adapted to be run on our HPC-cluster.
 
     conda activate dh_segment_torch #Activate previously created dh-Segment environment
 
-    # start jupyter
+    #start jupyter
     jupyter notebook --port 20286 --ip 10.103.251.100 --no-browser --notebook-dir=~/storage/mynotebooks/
-    # --notebook-dir= Add the correct path to the directory where your notebook is stored
-    # --ip Add the IP of the node that you want the notebook to be executed (e.g., HPC1)
+    #--notebook-dir= Add the correct path to the directory where your notebook is stored
+    #--ip Add the IP of the node that you want the notebook to be executed (e.g., HPC1)
 
 5. Launch Jupyter Notebook with the following command:
     sbatch --nodelist=s3ls2001 --gres=gpu:1 --cpus-per-task=4 run_jupyterlab_slurm.sh
-    # --nodelist= Add the server name of the node that you have entered in the bash file, (e.g., HPC1)
+    #--nodelist= Add the server name of the node that you have entered in the bash file, (e.g., HPC1)
