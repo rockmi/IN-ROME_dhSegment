@@ -5,7 +5,9 @@ This is the dhSegment demo notebook adapted to be run on our HPC-cluster.
 ## Quick how to install
 
 1. Copy all git from github when you are logged in HPC1:
-    wget  https://github.com/rockmi/IN-ROME_dhSegment/archive/refs/heads/main.zip #Or right-click on Download ZIP & copy link to the github repository ZIP file
+```
+wget  https://github.com/rockmi/IN-ROME_dhSegment/archive/refs/heads/main.zip #Or right-click on Download ZIP & copy link to the github repository ZIP file
+```
 
 2. To unzip the file, run the following:
     unzip <path to zip file>
